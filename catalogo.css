@@ -1,0 +1,171 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+    "c c"
+    "p p";
+    
+
+    
+}
+header{
+    grid-area: c;
+    background-color: #135999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+header> p{
+    font-size: 2rem;
+}
+
+header>a{
+    background-color: #062E53;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header > .logo > img{
+    height: 100px;
+}
+
+nav{
+    grid-area: m;
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+ 
+}
+
+
+nav>p{
+    font-size: 4rem;
+    color: white;
+    padding: 40px;
+    background-color: #135999
+
+}
+
+main{
+    grid-area: p;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 20px;
+    padding: 140px 0;
+    background-color: #347dc2;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 10px;
+   
+}
+
+.cadmodal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background-color: #062E53;
+  }
+ 
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(51, 113, 179);
+    border-radius: 10px;
+    width: 50%;
+  }
+
+  .cards {
+    width: 100vw;
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.card{
+    width: 300px;
+}
+
+.cardimagem img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 300px;
+    height: 200px;
+}
+
+.cards img:hover{
+    opacity: 0.7;
+}
+
+.cardinfo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: #0a59a3;
+}
+
+.cardnome {
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #0a59a3;
+    text-align: center;
+    margin-top: -5px;
+    padding: 20px;
+}
+
+.cardnome p{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.btn{
+  display:block;
+  
+}
+
+.btneditar{
+  display: block;
+}
+

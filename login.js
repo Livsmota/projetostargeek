@@ -5,16 +5,24 @@ const senha = document.getElementById("senha");
 
 formulario.onsubmit = (evento) =>{
 
-  
     let dados= JSON.parse(localStorage.getItem("dados"));
+    let logado;
    
    dados.forEach(element => {
     if (element.email == email.value && element.senha == senha.value)
     {
-        evento.preventDefault();
         mensagem.innerHTML= "aguarde..."
+        evento.preventDefault();
+          let dados = JSON.parse(sessionStorage.getItem("logado")) ||[]
+            dados.push(
+             {
+                  email: email.value
+             }
+
+            )
+        sessionStorage.setItem("logado", JSON.stringify(dados));
         setTimeout(()=> {
-            window.location.assign("index02.html")
+            window.location.assign("catalogo.html")
         },3000)
         return true;
     }
